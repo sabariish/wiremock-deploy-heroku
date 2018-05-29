@@ -24,5 +24,13 @@ git push heroku master
 - Check it
 ```
 curl -X POST http://<name>.herokuapp.com/__admin/mappings -d '{ "request": { "method": "GET", "url": "/" }, "response": { "body": "Hello world!" }}'
-curl http://<name>.herokuapp.com/
+
+  curl http://<name>.herokuapp.com/
+```
+
+With a json body returned
+```
+curl -X POST http://<name>.herokuapp.com/__admin/mappings -d '{ "request": { "method": "GET", "url": "/" }, "response": { "jsonBody": {"Hello": "world!" }}}'
+
+  curl http://<name>.herokuapp.com/
 ```

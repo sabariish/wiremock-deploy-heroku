@@ -1,1 +1,1 @@
-web: java ${JAVA_OPTS} -jar application.jar --port $PORT --verbose
+web: java -jar wiremock-standalone-2.27.2.jar
